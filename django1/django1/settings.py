@@ -25,7 +25,7 @@ SECRET_KEY = '_30spa!#j04gf0%!ga*si@)^1f+i+$yt%x*g9b&)v!b)h!d&0y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -118,4 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# Usado durante o desenvolvimento - DEBUG = True
 STATIC_URL = '/static/'
+
+# Usado durante a produção - DEBUG = False
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Redirecionamento de logout do admin
+LOGOUT_REDIRECT_URL = 'index'
