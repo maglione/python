@@ -128,3 +128,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Emulador de e-mails que imprime no console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Configurações de e-mail
+# EMAIL_HOST = 'localhost'
+# EMAIL_HOST_USER = 'no-reply@maglione.com.br'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_PASSWORD = 'sua senha'
